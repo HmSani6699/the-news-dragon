@@ -1,12 +1,12 @@
 import React from 'react';
 import { Button, Card } from 'react-bootstrap';
 import { FaArrowLeft } from 'react-icons/fa';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 
 const News = () => {
     const news = useLoaderData();
-    const { _id, title, details, image_url, author, total_view, rating } = news;
-    console.log(news);
+    const { _id, title, details, image_url,category_id } = news;
+    console.log(category_id);
     return (
         <div>
             <Card>
@@ -16,8 +16,7 @@ const News = () => {
                     <Card.Text>
                         {details}
                     </Card.Text>
-                    <Button variant="danger">
-                        <FaArrowLeft></FaArrowLeft> All news in this category</Button>
+                    <Link className='text-dacoretion-none' to={`/categor/${category_id}`}><Button variant='danger'><FaArrowLeft></FaArrowLeft> ll news in this category</Button></Link>
                 </Card.Body>
             </Card>
         </div>
