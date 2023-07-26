@@ -34,7 +34,7 @@ const Header = () => {
                             <Nav.Link href="#">Career</Nav.Link>
                         </Nav>
                         <Button>Profile</Button>
-                        <Button className="me-2" variant="dark">Login</Button>
+                        <Button className="ms-2" variant="dark">Login</Button>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
